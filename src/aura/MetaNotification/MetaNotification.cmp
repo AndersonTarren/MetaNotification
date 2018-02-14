@@ -1,0 +1,38 @@
+<!--
+ - Created by tarren.anderson on 2/9/18.
+ -->
+
+<aura:component controller="MetaNotificationController" description="MetaNotification" implements="forceCommunity:availableForAllPageTypes" access="global">
+    <aura:attribute name="fontColor" type="String" />
+    <aura:attribute name="bgColor" type="String" />
+    <aura:attribute name="iconName" type="String" default="action:info" />
+    <aura:attribute name="notificationName" type="String" default="Announcement" />
+    <aura:attribute name="notificationText" type="String" default="" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+    <style>
+        .meta-notification .notification-content{
+            background-color : #{!v.bgColor};
+            color: #{!v.fontColor};
+        }
+    </style>
+
+    <aura:if isTrue="{! and(v.notificationText != null, v.notificationText != '') }">
+        <div>
+            <div class="meta-notification">
+                <div class="slds-page-header notification-content">
+                    <div class="slds-media">
+                        <div class="slds-media__figure">
+                          <span class="slds-icon_container">
+                                <lightning:icon iconName="{!v.iconName}" variant="bare"/>
+                          </span>
+                        </div>
+                        <div class="slds-media__body">
+                            <p class="slds-text-body_small">{!v.notificationText}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aura:if>
+</aura:component>

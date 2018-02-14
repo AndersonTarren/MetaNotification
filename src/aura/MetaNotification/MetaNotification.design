@@ -1,0 +1,10 @@
+<!--
+ - Created by tarren.anderson on 2/9/18.
+ -->
+
+<design:component >
+    <design:attribute name="iconName" label="Icon Name" default="action:info" />
+    <design:attribute name="notificationName" label="Notification Name" default="Announcement" />
+    <design:attribute name="fontColor" label="Font Color" />
+    <design:attribute name="bgColor" label="Background Color" />
+</design:component>

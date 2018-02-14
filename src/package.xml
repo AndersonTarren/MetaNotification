@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MetaNotifications</fullName>
+    <types>
+        <members>MetaNotificationController</members>
+        <members>MetaNotificationControllerTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>MetaNotification</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>Notification__mdt.Content__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Notification__mdt</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Notification__mdt-Notification Layout</members>
+        <name>Layout</name>
+    </types>
+    <version>41.0</version>
+</Package>
